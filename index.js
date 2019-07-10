@@ -1,6 +1,8 @@
 const resolve = require("rollup-plugin-node-resolve");
 
 function preact(options) {
+
+    const aliasModules = options && options.aliasModules || {};
     const resolvePlugin = resolve(options);
     const customResolvePlugin = {
         ...resolvePlugin,
@@ -13,6 +15,9 @@ function preact(options) {
             }
             if (importee === "react-is" && options && options.noReactIs) {
                 return resolvePlugin.resolveId(__dirname + "/compat/react-is.js", importer);
+            }
+            if (aliasModules[importee]) {
+                return resolvePlugin.resolveId(aliasModules[importee], importer);
             }
             return resolvePlugin.resolveId(importee, importer);
         },
