@@ -1,0 +1,30 @@
+{
+  "name": "rollup-plugin-preact",
+  "version": "0.1.0",
+  "description": "Rollup Plugin for Preact Compat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rollup",
+    "plugin",
+    "preact",
+    "react",
+    "compat"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daybrush/rollup-plugin-preact.git"
+  },
+  "author": "Daybrush",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daybrush/rollup-plugin-preact/issues"
+  },
+  "homepage": "https://github.com/daybrush/rollup-plugin-preact#readme",
+  "dependencies": {
+    "preact-compat": "^3.19.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}
