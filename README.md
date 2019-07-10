@@ -24,9 +24,6 @@ const preact = require("rollup-plugin-preact");
 }
 ```
 
-## ⭐️ Show Your Support
-Please give a ⭐️ if this project helped you!
-
 ## 👏 Contributing
 
 If you have any questions or requests or want to contribute to `rollup-plugin-preact` or other packages, please write the [issue](https://github.com/daybrush/rollup-plugin-preact/issues) or give me a Pull Request freely.
