@@ -17,7 +17,7 @@ function preact(options) {
                 return resolvePlugin.resolveId(__dirname + "/compat/react-is.js", importer);
             }
             if (aliasModules[importee]) {
-                return resolvePlugin.resolveId(aliasModules[importee], importer);
+                return aliasModules[importee];
             }
             return resolvePlugin.resolveId(importee, importer);
         },
