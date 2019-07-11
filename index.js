@@ -8,7 +8,9 @@ function preact(options) {
         ...resolvePlugin,
         resolveId(importee, importer) {
             if (importee === "react" || importee === "react-dom") {
-                return "preact-compat";
+                return options && options.resolvePreactCompat
+                    ? resolvePlugin.resolveId("preact-compat", importer)
+                    : "preact-compat";
             }
             if (importee === "prop-types" && options && options.noPropTypes) {
                 return resolvePlugin.resolveId(__dirname + "/compat/prop-types.js", importer);

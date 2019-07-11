@@ -20,6 +20,7 @@ const preact = require("rollup-plugin-preact");
             noPropTypes: false,
             noReactIs: false,
             noEnv: false,
+            resolvePreactCompat: false,
             aliasModules: {
                 "react-css-styler": "preact-css-styler",
             },
