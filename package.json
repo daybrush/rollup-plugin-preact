@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-preact",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Rollup Plugin for Preact Compat",
   "main": "index.js",
   "scripts": {

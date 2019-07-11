@@ -13,6 +13,7 @@ const preact = require("rollup-plugin-preact");
 
 
 {
+    external: ["preact", "preact-compat"],
     plugins: [
         preact({
             ...nodeResolveOptions,
