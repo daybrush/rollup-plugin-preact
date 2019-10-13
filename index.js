@@ -13,7 +13,7 @@ function preact(options = {}) {
             ) {
                 const moduleName = options.usePreactX ? "preact/compat" : "preact-compat";
 
-                return (options.resolvePreactCompat || options.usePreactX)
+                return options.resolvePreactCompat
                     ? resolvePlugin.resolveId(moduleName, importer)
                     : moduleName;
             }
