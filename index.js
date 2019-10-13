@@ -10,11 +10,10 @@ function preact(options = {}) {
             if (
                 importee === "react"
                 || importee === "react-dom"
-                || (importee === "preact-compat" && options.usePreactCompat2)
             ) {
-                const moduleName = options.usePreactCompat2 ? "preact-compat2" : "preact-compat";
+                const moduleName = options.usePreactX ? "preact/compat" : "preact-compat";
 
-                return options.resolvePreactCompat
+                return (options.resolvePreactCompat || options.usePreactX)
                     ? resolvePlugin.resolveId(moduleName, importer)
                     : moduleName;
             }

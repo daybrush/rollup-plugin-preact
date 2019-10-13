@@ -7,7 +7,6 @@
 
 ## 🚀 How to use
 * See Options: https://github.com/rollup/rollup-plugin-node-resolve
-* What is **usePreactCompat2**?: https://github.com/daybrush/preact-compat2
 
 ```js
 const preact = require("rollup-plugin-preact");
@@ -18,7 +17,7 @@ const preact = require("rollup-plugin-preact");
     plugins: [
         preact({
             ...nodeResolveOptions,
-            usePreactCompat2: false, // preact-compat2 never import prop-types.
+            usePreactX: false, // usePreactX is auto resolvePreactCompat: true.
             noPropTypes: false,
             noReactIs: false,
             noEnv: false,
